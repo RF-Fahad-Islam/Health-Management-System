@@ -34,7 +34,7 @@ You can get some command to manage such as :
    managed all data using a JSON file
 ```
 ## Overview
-**Here is an overview of the program when runs. It will show an interface  on the Python Interpreter described as below and took  input from the user: **
+**Here is an overview of the program when runs. It will show an interface  on the Python Interpreter described as below and took  input from the user.**
 ```
 First: # Shows it first to assign names for start
 
