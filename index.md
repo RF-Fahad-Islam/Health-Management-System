@@ -1,37 +1,69 @@
-## Welcome to GitHub Pages
+# Health Management System
 
-You can use the [editor on GitHub](https://github.com/RF-Fahad-Islam/Health-Management-System/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Health Management System is a menu-driven (Not a GUI) python program that helps you to manage your **diet and exercise records** on a **`.log`** file along with a specific `date and time and name`. It's maybe helpful for **Logging** your activities data. It's manages and named the log files as the person name and creates every log file (that needed) automatically along with the users name and also saved the names data on a ```{names.json}``` file.
+## How it works
+It is developed using ```Classes and Objects```. A class named Health manager used to manage all the things of the program. You can change the class functions for developing or adding new features for the guaranteed **pull requests**. Some Built-in modules used that given below
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Packages or Modules
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Note: No external packages used in this program**
 
-```markdown
-Syntax highlighted code block
+### Built-in Modules
 
-# Header 1
-## Header 2
-### Header 3
+**Some Built-in modules used on this program Such as ```[datetime, os, json]```**
+```
+# Module name ---- # Why used
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+import datetime # To save the log data with time
+import os       # To create the log files with the user name and type
+import json     # To save the given usernames as .JSON format.
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Usage
+You can get some command to manage such as : 
+```{Assign names, Get names, log & retrieve , update names, remove name and delete all data }```
 
-### Jekyll Themes
+```python
+1. Log everyday activities on a .log file with date and time
+2. Retrieve the data when you need it.
+3. Add as many names as you want for logging on different files
+4. Delete names whose you want to remove
+5. Update and access names with their given unique (int) keys
+6. You don't need to worry about the names data and files. it's 
+   managed all data using a JSON file
+```
+## Overview
+**Here is an overview of the program when runs. It will show an interface  on the Python Interpreter described as below and took  input from the user: **
+```
+First: # Shows it first to assign names for start
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RF-Fahad-Islam/Health-Management-System/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+---Assigning names---
+Enter "q" to exit    
+> Enter the name :
 
-### Support or Contact
+Then: # Then Shows the command palate.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Commands: (Type the words or "srl"[such. 1 , 2, 3] for a command)
+srl|---- commands ---------| ---------------work-------------------
+1. | get names            :| Get the saved names
+2. | assign Names         :| Assign names in the dictionary
+3. | update names         :| To update names or insert names data
+4. | log & retrieve       :| To log or retrieve the data of a person
+5. | remove name          :| To remove any name
+6. | del all data         :| To delete all names
+7. | exit or quit or q    :| To exit the software
+8. | help or show commands:| To show the command interface again
+
+> Enter the command :  
+```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Versions 
+**Note : This is developed in the ```<PYTHON-3.9> (Version)``` Environment**
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/) **[Made by Fahad]**
