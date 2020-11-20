@@ -42,6 +42,7 @@ First: # Shows it first to assign names for start
 Enter "q" to exit    
 > Enter the name :
 ```
+
 ```
 Then: # Then Shows the command palate.
 
@@ -68,3 +69,6 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) **[Made by Fahad]**
+
+## Thanks for visiting
+**Please help to improve the project further.**
