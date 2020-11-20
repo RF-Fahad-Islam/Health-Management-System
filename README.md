@@ -41,7 +41,8 @@ First: # Shows it first to assign names for start
 ---Assigning names---
 Enter "q" to exit    
 > Enter the name :
-
+```
+```
 Then: # Then Shows the command palate.
 
 Commands: (Type the words or "srl"[such. 1 , 2, 3] for a command)
