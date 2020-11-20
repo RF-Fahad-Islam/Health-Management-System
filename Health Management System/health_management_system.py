@@ -172,12 +172,7 @@ class Healthmanager():
         return datetime.datetime.now()
 
 
-if __name__ == "__main__":
-    #Change the directory to this folder
-    path = os.path.join(os.getcwd(), "Health Management System")
-    if os.getcwd() != path:
-        os.chdir(path)
-        
+if __name__ == "__main__":        
     clientDict = {}
     newHm = Healthmanager(clientDict)
     commands = ''' ************************ Health Management System ************************
