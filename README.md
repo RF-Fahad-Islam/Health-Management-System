@@ -22,9 +22,9 @@ import json     # To save the given usernames as .JSON format.
 
 ## Usage
 You can get some command to manage such as : 
-```{Assign names, Get names, log & retrieve , update names, remove name and delete all data }```
+```{Assign names, Get names, update names, log & retrieve, search name, sort names, remove name, and delete all data} ```
 
-```python
+```
 1. Log everyday activities on a .log file with date and time
 2. Retrieve the data when you need it.
 3. Add as many names as you want for logging on different files
@@ -48,14 +48,16 @@ Then: # Then Shows the command palate.
 
 Commands: (Type the words or "srl"[such. 1 , 2, 3] for a command)
 srl|---- commands ---------| ---------------work-------------------
-1. | get names            :| Get the saved names
+1. | get all names        :| Get the saved names
 2. | assign Names         :| Assign names in the dictionary
 3. | update names         :| To update names or insert names data
 4. | log & retrieve       :| To log or retrieve the data of a person
-5. | remove name          :| To remove any name
-6. | del all data         :| To delete all names
-7. | exit or quit or q    :| To exit the software
-8. | help or show commands:| To show the command interface again
+5. | search name          :| To search the key of any name
+6. | sort names           :| To sort the names
+7. | remove name          :| To remove any name
+8. | del all data         :| To delete all names
+9. | exit or quit or q    :| To exit the software
+10.| help or show commands:| To show the command interface again
 
 > Enter the command :  
 ```
@@ -65,7 +67,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Versions 
-**Note : This is developed in the ```<PYTHON-3.9> (Version)``` Environment**
+**Note: This is developed in the ```<PYTHON-3.9> (Version)``` Environment**
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) **[Made by Fahad]**
