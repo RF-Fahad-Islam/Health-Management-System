@@ -138,13 +138,31 @@ class Healthmanager():
                 break
             if valueinput.lower() not in self.values:
                 updateDict[keyinput] = valueinput
-                print("Successfully updated")
+                print("Successfully updated!")
                 self.updateValuesOfDict()
                 self.clientDict.update(updateDict)
                 self.saveNames()
             else:
                 print(f"\"{valueinput}\" is already present in the names data. Please Enter a unique name.")
             
+    def searchName(self):
+            user = input("Enter the name to search : ")
+            search_result = []
+            for key in self.clientDict.keys():
+                value = self.clientDict.get(key)
+                if user.lower().startswith(value.lower()):
+                    print("\t\t\t***Search Results***")
+                    print(f"{key}. {value}")
+                    search_result.append(value)
+            if len(search_result) == 0:
+                print(f"There are no name like \"{user}\"")
+                
+    def sortNames(self):
+        confirm = input("Do you really want to sort the names (y/n) : ")
+        if confirm == "y":
+            self.clientDict = {k: v for k, v in sorted(self.clientDict.items(), key=lambda item: item[1])}
+            self.saveNames()
+            print("Successfully sorted the names according to alphabetical order!")
     def removeName(self):
         self.showNames()
         res = input("\n Enter the no. of name you want to delete : ")
@@ -172,41 +190,52 @@ class Healthmanager():
         return datetime.datetime.now()
 
 
-if __name__ == "__main__":        
+if __name__ == "__main__":
+    #Change the directory to this folder
+    path = os.path.join(os.getcwd(), "Health Management System")
+    if os.getcwd() != path:
+        os.chdir(path)
+        
     clientDict = {}
     newHm = Healthmanager(clientDict)
     commands = ''' ************************ Health Management System ************************
             Commands: (Type the words or "srl"[such. 1 , 2, 3] for a command)
             srl|---- commands ---------| ---------------work-------------------
-            1. | get names            :| Get the saved names
+            1. | get all names        :| Get the saved names
             2. | assign Names         :| Assign names in the dictionary
             3. | update names         :| To update names or insert names data
             4. | log & retrieve       :| To log or retrieve the data of a person
-            5. | remove name          :| To remove any name
-            6. | del all data         :| To delete all names
-            7. | exit or quit or q    :| To exit the software
-            8. | help or show commands:| To show the command interface again
+            5. | search name          :| To search the key of any name
+            6. | sort names           :| To sort the names
+            7. | remove name          :| To remove any name
+            8. | del all data         :| To delete all names
+            9. | exit or quit or q    :| To exit the software
+            10.| help or show commands:| To show the command interface again
         '''
     print(commands)
     while True:
         userinput = input("Enter the command : ")
-        if userinput.lower() == "get names" or userinput == "1":
+        if userinput.lower() == "get all names" or userinput == "1":
             newHm.showNames()
         elif userinput.lower() == "assign names" or userinput == "2":
             newHm.assignNames()
-        elif userinput.lower() == "log & retrive" or userinput == "3":
+        elif userinput.lower() == "update names" or userinput == "3":
             newHm.updateDict()
         elif userinput.lower() == "log & retrive" or userinput == "4":
             newHm.initial()
-        elif userinput.lower() == "remove name" or userinput == "5":
+        elif userinput.lower() == "search name" or userinput == "5":
+            newHm.searchName()
+        elif userinput.lower() == "sort names" or userinput == "6":
+            newHm.sortNames()
+        elif userinput.lower() == "remove name" or userinput == "7":
             newHm.removeName()
-        elif userinput.lower() == "del data" or userinput == "6":
+        elif userinput.lower() == "del data" or userinput == "8":
             newHm.deleteAllNames()
-        elif userinput.lower() == "exit" or userinput.lower() == "quit" or userinput.lower() == "q" or userinput == "7":
+        elif userinput.lower() == "exit" or userinput.lower() == "quit" or userinput.lower() == "q" or userinput == "9":
             print("Thanks for using these software!")
             input("Press Enter to exit ")
             exit()
-        elif userinput.lower() == "help" or userinput.lower() == "show command" or userinput == "8":
+        elif userinput.lower() == "help" or userinput.lower() == "show command" or userinput == "10":
             print(commands)
         else:
             print("***Invalid Keyword!***")
